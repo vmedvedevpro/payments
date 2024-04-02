@@ -19,6 +19,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payments.Application", "src
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payments.Infrastructure", "src\Payments.Infrastructure\Payments.Infrastructure.csproj", "{EAD92CB8-BD69-407B-8C87-7E3326058CFA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{5A42A997-8E37-4FDE-82C9-07F9453B29C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payments.Infrastructure.Tests", "tests\Payments.Infrastructure.Tests\Payments.Infrastructure.Tests.csproj", "{7DBE18F8-D068-4006-8E2E-3F5F65365D9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payments.Tests.Common", "tests\Payments.Tests.Common\Payments.Tests.Common.csproj", "{25C073DD-76DF-4805-9074-7D00BB12107B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +51,14 @@ Global
 		{EAD92CB8-BD69-407B-8C87-7E3326058CFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAD92CB8-BD69-407B-8C87-7E3326058CFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAD92CB8-BD69-407B-8C87-7E3326058CFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DBE18F8-D068-4006-8E2E-3F5F65365D9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DBE18F8-D068-4006-8E2E-3F5F65365D9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DBE18F8-D068-4006-8E2E-3F5F65365D9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DBE18F8-D068-4006-8E2E-3F5F65365D9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25C073DD-76DF-4805-9074-7D00BB12107B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25C073DD-76DF-4805-9074-7D00BB12107B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25C073DD-76DF-4805-9074-7D00BB12107B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25C073DD-76DF-4805-9074-7D00BB12107B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{63039C1A-AFDF-4BB3-8896-98C341592792} = {F1EE37D8-C4D9-4A41-82A9-D0F1314D5229}
@@ -52,5 +66,7 @@ Global
 		{2DC94D7C-14E9-4157-A203-B31F866CA518} = {F1EE37D8-C4D9-4A41-82A9-D0F1314D5229}
 		{C02D7AF9-9311-422E-821A-7C11BEAEF43F} = {F1EE37D8-C4D9-4A41-82A9-D0F1314D5229}
 		{EAD92CB8-BD69-407B-8C87-7E3326058CFA} = {F1EE37D8-C4D9-4A41-82A9-D0F1314D5229}
+		{7DBE18F8-D068-4006-8E2E-3F5F65365D9C} = {5A42A997-8E37-4FDE-82C9-07F9453B29C7}
+		{25C073DD-76DF-4805-9074-7D00BB12107B} = {5A42A997-8E37-4FDE-82C9-07F9453B29C7}
 	EndGlobalSection
 EndGlobal
