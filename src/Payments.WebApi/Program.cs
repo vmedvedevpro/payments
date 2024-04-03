@@ -1,3 +1,7 @@
+using System.Text.Json.Serialization;
+
+using Microsoft.AspNetCore.Mvc;
+
 using Payments.Application;
 using Payments.WebApi.Common.Extensions;
 
@@ -10,7 +14,9 @@ builder.Configuration
        .AddUserSecrets<Program>(true);
 
 builder.Services.AddEndpointsApiExplorer()
-       .AddSwaggerGen(o => o.SupportNonNullableReferenceTypes());
+       .AddSwaggerGen(o => { o.SupportNonNullableReferenceTypes(); })
+       .ConfigureHttpJsonOptions(o => o.SerializerOptions.Converters.Add(new JsonStringEnumConverter()))
+       .Configure<JsonOptions>(o => o.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
 
 builder.Services.AddApplication();
 
