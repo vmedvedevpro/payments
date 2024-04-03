@@ -3,6 +3,7 @@ using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Mvc;
 
 using Payments.Application;
+using Payments.Infrastructure;
 using Payments.WebApi.Common.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,7 +19,9 @@ builder.Services.AddEndpointsApiExplorer()
        .ConfigureHttpJsonOptions(o => o.SerializerOptions.Converters.Add(new JsonStringEnumConverter()))
        .Configure<JsonOptions>(o => o.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
 
-builder.Services.AddApplication();
+builder.Services
+       .AddApplication()
+       .AddInfrastructure(builder.Configuration);
 
 var app = builder.Build();
 

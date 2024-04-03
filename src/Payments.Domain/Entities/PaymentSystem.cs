@@ -9,4 +9,6 @@ public class PaymentSystem : EntityBase
     public string? Description { get; set; }
 
     public ICollection<Currency> Currencies { get; set; } = new List<Currency>();
+
+    public ICollection<Payment> Payments { get; set; } = new List<Payment>();
 }
