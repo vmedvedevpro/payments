@@ -4,7 +4,9 @@ using Microsoft.Extensions.DependencyInjection;
 
 using Npgsql;
 
+using Payments.Application.Common.Interfaces;
 using Payments.Infrastructure.Persistence;
+using Payments.Infrastructure.Persistence.Repository;
 
 namespace Payments.Infrastructure;
 
@@ -16,6 +18,7 @@ public static class DependencyInjection
     private static IServiceCollection AddDatabase(this IServiceCollection services, IConfiguration configuration)
     {
         var dataSource = new NpgsqlDataSourceBuilder(configuration.GetConnectionString("Database")).Build();
-        return services.AddDbContextFactory<DatabaseContext>(o => o.EnableSensitiveDataLogging().UseNpgsql(dataSource));
+        return services.AddSingleton<IRepository, Repository>()
+                       .AddDbContextFactory<DatabaseContext>(o => o.EnableSensitiveDataLogging().UseNpgsql(dataSource));
     }
 }
