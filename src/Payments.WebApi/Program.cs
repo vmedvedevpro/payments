@@ -10,7 +10,7 @@ builder.Configuration
        .AddUserSecrets<Program>(true);
 
 builder.Services.AddEndpointsApiExplorer()
-       .AddSwaggerGen();
+       .AddSwaggerGen(o => o.SupportNonNullableReferenceTypes());
 
 builder.Services.AddApplication();
 
