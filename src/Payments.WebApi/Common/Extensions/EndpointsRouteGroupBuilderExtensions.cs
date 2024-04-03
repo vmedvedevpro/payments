@@ -8,5 +8,6 @@ public static class EndpointsRouteGroupBuilderExtensions
         builder.MapGroup("api/v1")
                .MapCurrency()
                .MapCurrencyGroup()
-               .MapPayment();
+               .MapPayment()
+               .MapPaymentSystem();
 }

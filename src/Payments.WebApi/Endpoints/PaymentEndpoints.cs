@@ -32,10 +32,7 @@ public static class PaymentEndpoints
                      c => c.WithSummary("Create payment"))
                  .MapDelete(
                      "",
-                     (
-                         ISender sender,
-                         [AsParameters] DeletePaymentCommand query,
-                         CancellationToken cancellationToken) =>
+                     (ISender sender, [AsParameters] DeletePaymentCommand query, CancellationToken cancellationToken) =>
                          sender.Send(query, cancellationToken),
                      c => c.WithSummary("Delete payment"))
                  .MapPut(
