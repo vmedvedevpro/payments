@@ -5,6 +5,7 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+      <UserSecretsId>Payments.WebApi</UserSecretsId>
     </PropertyGroup>
 
     <ItemGroup>
@@ -14,7 +15,7 @@
     </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Endpoints\"/>
+    <ProjectReference Include="..\Payments.Application\Payments.Application.csproj"/>
   </ItemGroup>
 
 </Project>
