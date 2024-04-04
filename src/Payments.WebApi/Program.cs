@@ -25,6 +25,8 @@ builder.Services
 
 var app = builder.Build();
 
+await app.MigrateDatabaseAsync(app.Lifetime.ApplicationStopping);
+
 if (app.Environment.IsDevelopment())
     app.UseSwagger()
        .UseSwaggerUI();
