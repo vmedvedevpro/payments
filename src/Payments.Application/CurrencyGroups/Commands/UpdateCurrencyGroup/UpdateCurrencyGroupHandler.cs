@@ -1,8 +1,13 @@
-using MediatR;
+using Payments.Application.Common.Interfaces;
 
 namespace Payments.Application.CurrencyGroups.Commands.UpdateCurrencyGroup;
 
-public record UpdateCurrencyGroupHandler : IRequestHandler<UpdateCurrencyGroupCommand>
+public record UpdateCurrencyGroupHandler(IRepository Repository) : IRequestHandler<UpdateCurrencyGroupCommand>
 {
-    public Task Handle(UpdateCurrencyGroupCommand request, CancellationToken cancellationToken) => throw new NotImplementedException();
+    public async Task Handle(UpdateCurrencyGroupCommand request, CancellationToken cancellationToken)
+    {
+        await using var transaction = await Repository.BeginTransactionAsync<CurrencyGroup>(cancellationToken);
+        transaction.Update(request.CurrencyGroup);
+        await transaction.CommitAsync(cancellationToken);
+    }
 }

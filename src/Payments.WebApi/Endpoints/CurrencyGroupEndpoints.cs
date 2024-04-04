@@ -3,7 +3,7 @@ using MediatR;
 using Payments.Application.CurrencyGroups.Commands.CreateCurrencyGroup;
 using Payments.Application.CurrencyGroups.Commands.DeleteCurrencyGroup;
 using Payments.Application.CurrencyGroups.Commands.UpdateCurrencyGroup;
-using Payments.Application.CurrencyGroups.Quencies.GetCurrencyGroup;
+using Payments.Application.CurrencyGroups.Queries.GetCurrencyGroup;
 using Payments.Application.CurrencyGroups.Queries.GetCurrencyGroups;
 using Payments.WebApi.Common.Extensions;
 

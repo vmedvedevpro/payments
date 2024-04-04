@@ -1,8 +1,6 @@
-using MediatR;
+namespace Payments.Application.CurrencyGroups.Queries.GetCurrencyGroup;
 
-namespace Payments.Application.CurrencyGroups.Quencies.GetCurrencyGroup;
-
-public record GetCurrencyGroupQuery : IRequest<CurrencyGroup>
+public record GetCurrencyGroupQuery : IRequest<CurrencyGroup?>
 {
     public Guid Id { get; set; }
 }

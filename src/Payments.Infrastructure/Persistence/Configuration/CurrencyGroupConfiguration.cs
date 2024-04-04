@@ -9,6 +9,7 @@ public class CurrencyGroupConfiguration : EntityBaseConfigurationBase<CurrencyGr
     public override void Configure(EntityTypeBuilder<CurrencyGroup> builder)
     {
         builder.HasMany(x => x.Currencies).WithMany();
+        builder.HasIndex(x => x.Name).IsUnique();
         base.Configure(builder);
     }
 }

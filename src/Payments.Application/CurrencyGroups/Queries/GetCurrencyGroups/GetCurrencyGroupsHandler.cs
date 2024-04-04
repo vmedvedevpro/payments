@@ -1,9 +1,14 @@
-using MediatR;
+using Microsoft.EntityFrameworkCore;
+
+using Payments.Application.Common.Interfaces;
 
 namespace Payments.Application.CurrencyGroups.Queries.GetCurrencyGroups;
 
-public record GetCurrencyGroupsHandler : IRequestHandler<GetCurrencyGroupsQuery, ICollection<CurrencyGroup>>
+public record GetCurrencyGroupsHandler(IRepository Repository) : IRequestHandler<GetCurrencyGroupsQuery, ICollection<CurrencyGroup>>
 {
-    public Task<ICollection<CurrencyGroup>> Handle(GetCurrencyGroupsQuery request, CancellationToken cancellationToken) =>
-        throw new NotImplementedException();
+    public async Task<ICollection<CurrencyGroup>> Handle(GetCurrencyGroupsQuery request, CancellationToken cancellationToken)
+    {
+        await using var transaction = await Repository.BeginTransactionAsync<CurrencyGroup>(cancellationToken);
+        return await transaction.Set.AsNoTracking().Include(x => x.Currencies).ToListAsync(cancellationToken);
+    }
 }
