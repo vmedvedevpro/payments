@@ -13,10 +13,6 @@ public class Payment : EntityBase
 
     public PaymentStatus Status { get; set; }
 
-    public Guid PaymentSystemId { get; set; }
-
-    public PaymentSystem PaymentSystem { get; set; } = default!;
-
     public Guid CurrencyId { get; set; }
 
     public Currency Currency { get; set; } = default!;

@@ -8,7 +8,5 @@ public record CreatePaymentDto
 
     public decimal Amount { get; set; }
 
-    public Guid PaymentSystemId { get; set; }
-
     public Guid CurrencyId { get; set; }
 }
