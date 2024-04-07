@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Payments.Application;
 using Payments.Infrastructure;
 using Payments.WebApi.Common.Extensions;
+using Payments.WebApi.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,6 +32,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger()
        .UseSwaggerUI();
 
+app.UseMiddleware<ApiExceptionMiddleware>();
 app.UseHttpsRedirection()
    .UseRouting()
    .UseEndpoints(x => x.MapEndpoints());
