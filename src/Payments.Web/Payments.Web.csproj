@@ -12,4 +12,8 @@
     <ProjectReference Include="..\Payments.Domain\Payments.Domain.csproj"/>
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MudBlazor" Version="6.19.1"/>
+  </ItemGroup>
+
 </Project>
