@@ -5,7 +5,7 @@ namespace Payments.Domain.Entities;
 
 public class Payment : EntityBase
 {
-    public string Name { get; set; } = default!;
+    public string Name { get; set; } = null!;
 
     public string? Description { get; set; }
 
@@ -15,5 +15,5 @@ public class Payment : EntityBase
 
     public Guid CurrencyId { get; set; }
 
-    public Currency Currency { get; set; } = default!;
+    public Currency Currency { get; set; } = null!;
 }

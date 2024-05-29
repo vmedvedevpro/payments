@@ -1,6 +1,6 @@
 namespace Payments.Application.Currencies.Commands.CreateCurrency;
 
-public record CreateCurrencyDto
+public class CreateCurrencyDto
 {
-    public string Name { get; init; } = default!;
+    public string Name { get; init; } = null!;
 }

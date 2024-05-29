@@ -16,9 +16,11 @@ builder.Configuration
        .AddUserSecrets<Program>(true);
 
 builder.Services.AddEndpointsApiExplorer()
+       .AddProblemDetails()
        .AddSwaggerGen(o => { o.SupportNonNullableReferenceTypes(); })
        .ConfigureHttpJsonOptions(o => o.SerializerOptions.Converters.Add(new JsonStringEnumConverter()))
-       .Configure<JsonOptions>(o => o.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
+       .Configure<JsonOptions>(o => o.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()))
+       .AddExceptionHandler<ValidationExceptionHandler>();
 
 builder.Services
        .AddApplication()
@@ -32,8 +34,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger()
        .UseSwaggerUI();
 
-app.UseMiddleware<ApiExceptionMiddleware>();
-app.UseHttpsRedirection()
+app.UseExceptionHandler()
+   .UseHttpsRedirection()
    .UseRouting()
    .UseEndpoints(x => x.MapEndpoints());
 

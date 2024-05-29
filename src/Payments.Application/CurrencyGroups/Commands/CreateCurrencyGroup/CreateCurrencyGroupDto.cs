@@ -1,6 +1,6 @@
 namespace Payments.Application.CurrencyGroups.Commands.CreateCurrencyGroup;
 
-public record CreateCurrencyGroupDto
+public class CreateCurrencyGroupDto
 {
-    public string Name { get; init; } = default!;
+    public string Name { get; init; } = null!;
 }

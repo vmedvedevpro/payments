@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payments.Infrastructure.Tes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payments.Tests.Common", "tests\Payments.Tests.Common\Payments.Tests.Common.csproj", "{25C073DD-76DF-4805-9074-7D00BB12107B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payments.Application.Tests", "tests\Payments.Application.Tests\Payments.Application.Tests.csproj", "{B732E379-9F0C-4987-8D02-BEDB000EFB32}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,10 @@ Global
 		{25C073DD-76DF-4805-9074-7D00BB12107B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25C073DD-76DF-4805-9074-7D00BB12107B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25C073DD-76DF-4805-9074-7D00BB12107B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B732E379-9F0C-4987-8D02-BEDB000EFB32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B732E379-9F0C-4987-8D02-BEDB000EFB32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B732E379-9F0C-4987-8D02-BEDB000EFB32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B732E379-9F0C-4987-8D02-BEDB000EFB32}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{63039C1A-AFDF-4BB3-8896-98C341592792} = {F1EE37D8-C4D9-4A41-82A9-D0F1314D5229}
@@ -68,5 +74,6 @@ Global
 		{EAD92CB8-BD69-407B-8C87-7E3326058CFA} = {F1EE37D8-C4D9-4A41-82A9-D0F1314D5229}
 		{7DBE18F8-D068-4006-8E2E-3F5F65365D9C} = {5A42A997-8E37-4FDE-82C9-07F9453B29C7}
 		{25C073DD-76DF-4805-9074-7D00BB12107B} = {5A42A997-8E37-4FDE-82C9-07F9453B29C7}
+		{B732E379-9F0C-4987-8D02-BEDB000EFB32} = {5A42A997-8E37-4FDE-82C9-07F9453B29C7}
 	EndGlobalSection
 EndGlobal

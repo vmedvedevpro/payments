@@ -4,7 +4,7 @@ namespace Payments.Domain.Entities;
 
 public class CurrencyGroup : EntityBase
 {
-    public string Name { get; set; } = default!;
+    public string Name { get; set; } = null!;
 
-    public ICollection<Currency> Currencies { get; set; } = new List<Currency>();
+    public ICollection<Currency> Currencies { get; set; } = [];
 }

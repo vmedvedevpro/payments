@@ -1,8 +1,8 @@
 namespace Payments.Application.PaymentSystems.Commands.CreatePaymentSystem;
 
-public record CreatePaymentSystemDto
+public class CreatePaymentSystemDto
 {
-    public string Name { get; set; } = default!;
+    public string Name { get; set; } = null!;
 
     public string? Description { get; set; }
 }

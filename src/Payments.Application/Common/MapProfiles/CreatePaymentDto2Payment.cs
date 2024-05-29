@@ -8,8 +8,7 @@ public class CreatePaymentDto2Payment : Profile
 {
     public CreatePaymentDto2Payment() =>
         CreateMap<CreatePaymentDto, Payment>()
-            .ForMember(d => d.Name, o => o.MapFrom(s => s.Name))
-            .ForMember(d => d.Description, o => o.MapFrom(s => s.Description))
-            .ForMember(d => d.Amount, o => o.MapFrom(s => s.Amount))
-            .ForMember(d => d.CurrencyId, o => o.MapFrom(s => s.CurrencyId));
+            .ForMember(d => d.Id, o => o.Ignore())
+            .ForMember(d => d.Status, o => o.Ignore())
+            .ForMember(d => d.Currency, o => o.Ignore());
 }

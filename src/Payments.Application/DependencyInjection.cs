@@ -8,8 +8,10 @@ namespace Payments.Application;
 
 public static class DependencyInjection
 {
+    private static Assembly Assembly => Assembly.GetExecutingAssembly();
+
     public static IServiceCollection AddApplication(this IServiceCollection services) =>
-        services.AddMediatR(cfg => { cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()); })
-                .AddAutoMapper(Assembly.GetExecutingAssembly())
-                .AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+        services.AddMediatR(cfg => { cfg.RegisterServicesFromAssembly(Assembly); })
+                .AddAutoMapper(Assembly)
+                .AddValidatorsFromAssembly(Assembly);
 }

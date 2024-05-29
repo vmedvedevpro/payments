@@ -8,5 +8,5 @@ public class CreateCurrencyDto2Currency : Profile
 {
     public CreateCurrencyDto2Currency() =>
         CreateMap<CreateCurrencyDto, Currency>()
-            .ForMember(d => d.Name, o => o.MapFrom(s => s.Name));
+            .ForMember(d => d.Id, o => o.Ignore());
 }

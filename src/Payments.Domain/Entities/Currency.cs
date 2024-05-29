@@ -4,5 +4,5 @@ namespace Payments.Domain.Entities;
 
 public class Currency : EntityBase
 {
-    public string Name { get; set; } = default!;
+    public string Name { get; set; } = null!;
 }
